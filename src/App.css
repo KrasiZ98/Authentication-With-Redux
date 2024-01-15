@@ -1,38 +1,315 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: lightgray;
+}
+
+.navigation {
+  background-color: black;
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+
+.auth_links a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 23px;
+
+}
+
+.login_link,
+.register_link {
+  color: #898989;
+}
+
+.login_link,
+.register_link:hover {
+  color: #fff;
+}
+
+
+
+.logout_link {
+  background-color: beige;
+  height: 100%;
+  border-radius: 5px;
+  height: 100%;
+  padding: 11px;
+  color: rgb(108, 108, 108);
+}
+
+.logout_link:hover {
+  color: black;
+}
+
+
+.home-link {
+  background-color: green;
+  border-radius: 5px;
+  height: 100%;
+  padding: 11px;
+}
+
+.home-link:hover {
+  background-color: rgb(25, 216, 25);
+}
+
+.home-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px
+}
+
+/* ///// */
+
+.form-component {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+
+}
+
+.form-whrapper {
+  padding: 30px 40px;
+  color: black;
+  width: 420px;
+  border-radius: 14px;
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.form-whrapper h1 {
   text-align: center;
+  font-size: 36px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-whrapper .form-group {
+  text-align: center;
+  background-color: darkorange;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  outline: none;
+  border: 2px solid rgb(255, 255, 255, .2);
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group .icon {
+  margin-right: 20px;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: black;
+  padding: 20px 45px 20px 20px;
+  font-size: 20px;
+}
+
+.form-group input::placeholder {
+  color: white;
+  font-size: 20px;
+
+}
+
+.form-whrapper button {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link span a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ///// */
+.home {
+  text-align: center;
+  margin: 100px;
+}
+
+.home a {
+  color: #333;
+}
+
+.home a:hover {
+  color: black;
+}
+
+
+/* //// */
+
+.error {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+
+.error h2 {
+  text-align: center;
+  background-color: red;
+  width: 60%;
+  padding: 2px;
+  color: white;
+  border-radius: 40px;
+}
+
+/* ?//// */
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  margin: 150px auto;
+  color: black;
+}
+
+
+.profile {
+  width: 45%;
+  height: 600px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+  
+}
+
+.profile-image {
+  background-color: #333;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: black;
+  padding: 5px;
+  position: relative;
+  top: 110px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 120px;
+}
+
+.profile-action {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.profile-action button {
+  font-size: 15px;
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+ display: flex;
+ align-items: center;
+ text-align: center;
+ gap: 7px;
+ color: white;
+}
+.profile-icon {
+  font-size: 17px;
+}
+.profile-action .edit-btn {
+  background-color: #0a6d91;
+ 
+}
+
+.edit-btn:hover {
+  background-color: #4e8397;
+}
+
+.profile-action .delete-btn {
+  background-color: #c34a36;
+}
+
+.delete-btn:hover {
+  background-color: #c76959;
+}
+
+/* 
+//// */
+
+
+.error-box {
+  margin: 20px;
+  animation: fadein 3s, fadeout 7s ;
+  padding:5;
+  
+}
+
+.error-box p {
+ 
+  border-radius: 30px;
+  padding: 4px;
+  color: white;
+  background-color: red;
+  width: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  text-align: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeout {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0;
   }
 }
